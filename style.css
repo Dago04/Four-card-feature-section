@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+
+/* Reset CSS */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+
+
+/* Variables */
+
+
+:root {
+
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    /*Neutrals*/
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+
+    /* Fonts */
+    --Fs-400: 0.9275rem;
+    --Fs-500: 1.25rem;
+    --Fs-600: 1.625rem;
+    --Fs-700: 2.2rem;
+    --Fs-900: 2.5rem;
+    --Ff: 'Poppins', sans-serif;
+    --fw-light: 200;
+    --fw-normal: 400;
+    --fw-bold: 600;
+}
+
+
+/* Global Styles */
+
+html {
+    font-family: var(--Ff);
+    font-weight: var(--fw-normal);
+    font-size: var(--Fs);
+    line-height: 1.5;
+    color: var(--GrayishBlue);
+}
+
+body {
+   margin: 0;
+   padding-bottom: 5rem;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    color: var(--VeryDarkBlue);
+}
+
+.wrapper{
+    padding-inline: 2rem;
+    max-width: 500px;
+    margin-inline: auto;
+}
+
+
+
+header{
+    margin-block: 5.5rem;
+}
+h1{
+    font-weight: var(--fw-light);
+    font-size: var(--Fs-500);
+}
+h1 span{
+    font-weight: var(--fw-bold);
+}
+header > p{
+    font-size: var(--Fs-500);
+    
+}
+
+.layout-flex{
+    --gap: 2rem;
+    display: grid;
+    gap: var(--gap);
+}
+
+@media (min-width: 800px){
+    header{
+        text-align: center;
+        margin-block: 5.5rem;
+    }
+    .layout-flex{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    h1{
+        font-weight: var(--fw-light);
+        font-size: var(--Fs-700);
+    }
+    .wrapper{
+        padding-inline: 2rem;
+        max-width: 1280px;
+        margin-inline: auto;
+    }
+    
+    .wrapper--narrow{
+        max-width: 650px;
+        margin-inline: auto;
+    }
+   
+   
+}
+
+/* flex: 1; sets the flex property of these child elements to 1, meaning they will all occupy the same available space within the .layout-flex*/
+.layout-flex > *{
+    flex: 1;
+}
+
+.col{
+    
+    display: grid;
+    place-content: center;
+    gap: var(--gap);
+}
+
+.card{
+    --Br:.325rem;
+    padding: 2rem;
+    border-top: var(--Br) solid;
+   box-shadow: 0 1rem 1.5rem -0.5rem rgba(0, 50, 100, 0.15);
+   border-radius: var(--Br)
+}
+
+.card__title{
+    font-size: var(--Fs-600);
+    margin: 0;
+}
+
+.card_image{
+    display: block;
+    margin-left: auto;
+    margin-top: 2rem;
+}
+.border-red{
+    border-color: var(--Red);
+}
+.border-cyan{
+    border-color: var(--Cyan);
+}
+.border-orange{
+    border-color: var(--Orange);
+}
+
+.border-blue{
+    border-color: var(--Blue);
+}
+
+
